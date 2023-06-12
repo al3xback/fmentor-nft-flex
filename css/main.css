@@ -188,7 +188,9 @@ ol {
   background-image: url("../images/icons/clock.svg");
 }
 
-.card {
+.card,
+.card__image,
+.card__content {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -201,6 +203,9 @@ ol {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.card {
   width: 100%;
   max-width: 21.875em;
   padding: 1.5em;
@@ -216,11 +221,6 @@ ol {
 
 .card__image {
   position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   margin-bottom: 1.5em;
   background-color: hsl(215, 51%, 70%);
   -webkit-border-radius: 0.5em;
@@ -258,21 +258,6 @@ ol {
   -webkit-border-radius: inherit;
   -moz-border-radius: inherit;
   border-radius: inherit;
-}
-
-.card__content {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-direction: normal;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .card__title {

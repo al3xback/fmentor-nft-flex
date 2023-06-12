@@ -2,9 +2,14 @@
 @use '../abstracts/functions' as func;
 @use '../abstracts/mixins' as mix;
 
-.card {
+.card,
+.card__image,
+.card__content {
 	@include mix.flexbox;
 	@include mix.flex-direction(column);
+}
+
+.card {
 	width: 100%;
 	max-width: func.em(350);
 	padding: func.em(24);
@@ -16,7 +21,6 @@
 
 .card__image {
 	position: relative;
-	@include mix.flexbox;
 	margin-bottom: func.em(24);
 	background-color: var.$color-soft-blue;
 	@include mix.border-radius(0.5em);
@@ -45,11 +49,6 @@
 	width: 100%;
 	height: auto;
 	@include mix.border-radius(inherit);
-}
-
-.card__content {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
 }
 
 .card__title {
